@@ -43,7 +43,7 @@ public class Dog {
 		
 		System.out.println("Count of args : " + args.length);
 		for(int i = 0; i < args.length; i++) {
-			System,out.printf("%d - %s\n",);
+			System.out.printf("%d - %s\n");
 		}
 
 	}

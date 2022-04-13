@@ -32,8 +32,8 @@ public class ScannerStudy {
 //			input = this.scanner.nextLine(); // 입력한 문장을 다 리턴한다.
 			
 			System.out.println("정수를 입력하세요.");
-			value = this.scanner.nextInt();
-			System.out.printf("%d의 제곱은 %d입니다.\n\n", value, (value * value));
+//			value = this.scanner.nextInt();
+//			System.out.printf("%d의 제곱은 %d입니다.\n\n", value, (value * value));
 			
 		}
 		this.scanner.close();

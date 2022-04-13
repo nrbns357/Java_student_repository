@@ -10,18 +10,18 @@ public class Dog {
 	
 	
 	public void makeSound(){
-		System.out.println("¸Û¸Û");
+		System.out.println("ë©ë©");
 	}
 	
 	public void eat(String food) {
-//		System.out.println(name + "ÀÌ(°¡)" +food + "À» ¸Ô´Â´Ù.");
+//		System.out.println(name + "ëŠ”" +food + "ì„(ë¥¼)ë¨¹ìŠµë‹ˆë‹¤.");
 		
-		System.out.printf("%sÀÌ(°¡) %sÀ»(¸¦) ¸Ô´Â´Ù.\n",name,food);
+		System.out.printf("%sëŠ”(ì€) %sì„(ë¥¼) ë¨¹ìŠµë‹ˆë‹¤.\n",name,food);
 	}
 	
 	public void printInformation() {
-//		System.out.println("ÀÌ¸§ : " + name + "   ¸ö¹«°Ô : " + weight + "  »ö±ò : " + color);
-		System.out.printf("ÀÌ¸§ : %s ¸ö¹«°Ô : %.2f »ö±ò : %s\n", name, weight, color);
+//		System.out.println("ï¿½Ì¸ï¿½ : " + name + "   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : " + weight + "  ï¿½ï¿½ï¿½ï¿½ : " + color);
+		System.out.printf("ï¿½Ì¸ï¿½ : %s ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : %.2f ï¿½ï¿½ï¿½ï¿½ : %s\n", name, weight, color);
 		
 	}
 }
