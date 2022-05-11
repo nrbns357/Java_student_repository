@@ -2,10 +2,6 @@ package kr.hs.dgsw.java.dept1.d0420;
 
 public class Triangle extends Rectangle {
 	
-	protected final int width;
-	
-	protected final int height;
-	
 	public Triangle(int width, int height) {
 		super(width, height);
 	}
