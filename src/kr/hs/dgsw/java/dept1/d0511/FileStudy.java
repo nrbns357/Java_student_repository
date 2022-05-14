@@ -49,7 +49,7 @@ public class FileStudy {
 		String time = formatDate(date);
 		
 		System.out.println(file.getName() + "  " + modifiedTime);
-		System.out.println(file2.getName() + "  " + file2.lastModified());
+		System.out.println(file2.getName() + "  " + time);
 		System.out.println(file3.getName() + "  " + file3.lastModified());
 		System.out.println();
 		
