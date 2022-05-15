@@ -27,14 +27,22 @@ public class CommandLs extends AbstractCommand {
 			boolean bFile = file.isFile();
 			long modifiedTime = file.lastModified();
 			long size = file.length();
-			
+			String sizeBitChange = Long.toString(size);
 			Date date = makeDate(modifiedTime);
 			String time = formatDate(date);
 			
+			if(size >= 1024 * 1024 * 1024){
+				sizeBitChange = size/(100000000) + "G";
+			}else if(size >= 1024 * 1024) {
+				sizeBitChange = size/1000000 + "M";
+			}else if(size >= 1024) {
+				sizeBitChange = size/1000 + "K";
+			}
+			
 			if(!bFile) {
-			System.out.printf("%s  <DIR>  %15s %s\n",time, Long.toString(size), file.getName());
+			System.out.printf("%s  <DIR>  %15s %s\n",time, sizeBitChange, file.getName());
 			}else {
-				System.out.printf("%s         %15s %s\n",time, Long.toString(size), file.getName());
+				System.out.printf("%s         %15s %s\n",time, sizeBitChange, file.getName());
 			}
 		}
 			

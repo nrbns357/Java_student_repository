@@ -10,21 +10,31 @@ public class CommandCd extends AbstractCommand {
 
 	@Override
 	public File executeCommand() {
-		String usePath = commandLine.substring(3);
 		String path = currentDirectory.getPath();
-		
+		String usePath = commandLine.substring(3);
 
-		if(usePath == "..") {			
-			for(int i = commandLine.length() - 1; i >= 0; i--) {
-				char nowPath = path.charAt(i);
-				if(nowPath == '/') {
-//					String  = path.substring(0, i);
+		if(usePath.startsWith("..")) {			
+			path = path.substring(0, path.lastIndexOf('\\'-1) );
+			//	                if(nowPath == '\\') {
+//	                	path = path.substring(0, i);
+//	                	path.replace(0, i, );
+//	                	
+//						break;
+//	                }
+		}
+		else if((usePath.startsWith("") && usePath == "") || usePath.startsWith(" ")) {
+			System.out.println("----cannot find the path----");
+		}
+		else{
+				File file = new File(path + "/" + usePath);
+				
+				if(file.exists() && currentDirectory.isDirectory()){
+					path += "/" + usePath;
+				}else if(!file.exists()) {
+					System.out.println("---cannot find file---");
 				}
 			}
-			
-		}else{
-			path += "/" + usePath;
-		}
+		
 		return new File(path);
 	}
 }
