@@ -13,14 +13,13 @@ public class CommandCd extends AbstractCommand {
 		String path = currentDirectory.getPath();
 		String usePath = commandLine.substring(3);
 
-		if(usePath.startsWith("..")) {			
-			path = path.substring(0, path.lastIndexOf('\\'-1) );
-			//	                if(nowPath == '\\') {
-//	                	path = path.substring(0, i);
-//	                	path.replace(0, i, );
-//	                	
-//						break;
-//	                }
+		if(usePath.equals("..")) {	
+			try {
+				path = currentDirectory.getParentFile().getAbsolutePath();
+			} catch(NullPointerException e) {
+				System.out.println("cannot find the path");
+				path = currentDirectory.getAbsolutePath();
+			}
 		}
 		else if((usePath.startsWith("") && usePath == "") || usePath.startsWith(" ")) {
 			System.out.println("----cannot find the path----");
@@ -34,7 +33,7 @@ public class CommandCd extends AbstractCommand {
 					System.out.println("---cannot find file---");
 				}
 			}
-		
 		return new File(path);
+		
 	}
 }
