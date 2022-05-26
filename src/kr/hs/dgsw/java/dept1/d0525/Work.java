@@ -11,10 +11,9 @@ public class Work {
 		Work work = new Work();
 		Doer doer = null;
 		
-//		doer = new Doctor();
+		//doer = new Doctor();
 		doer = new Student();
-		
+				
 		work.doWorking(doer);
-		
 	}
 }

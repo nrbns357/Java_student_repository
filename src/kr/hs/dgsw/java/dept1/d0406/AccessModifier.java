@@ -3,11 +3,11 @@ package kr.hs.dgsw.java.dept1.d0406;
 public class AccessModifier {
 	public int publicValue;
 	
-	private int privateValue;
+	public int privateValue;
 	
-	protected int protectedValue;
+	public int protectedValue;
 	
-	int defualtValue;
+	public int defualtValue;
 	
 	
 	

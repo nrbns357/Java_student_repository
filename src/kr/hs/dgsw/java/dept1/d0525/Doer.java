@@ -2,11 +2,7 @@ package kr.hs.dgsw.java.dept1.d0525;
 
 public interface Doer {
 
-	public default void work() {
-
-	}
+	public void work();
 	
-	public default void play() {
-
-	}
+	public void play();
 }
