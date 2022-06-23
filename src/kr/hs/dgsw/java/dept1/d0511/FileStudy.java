@@ -82,7 +82,7 @@ public class FileStudy {
 		/* 파일 이름 바꾸기 */
 		File file1 = new File("a");
 		File newFile = new File("a");
-		boolean renamed = file1.renameTo(newFile);
+		boolean renamed = file1(newFile);
 		System.out.println("파일 이름 바꾸기");
 		System.out.println(file1.getName() + " " + renamed);
 		System.out.println();
